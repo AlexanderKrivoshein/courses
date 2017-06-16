@@ -32,8 +32,7 @@ class BaseItem(object):
 
 class ToDoItem(BaseItem):
     def __str__(self):
-        return '{} ToDo: {}'.format(
-            '+' if self.done else '-',
+        return 'ToDo: {}'.format(
             self.heading
         )
 
@@ -50,8 +49,7 @@ class ToBuyItem(BaseItem):
         self.price = price
 
     def __str__(self):
-        return '{} ToBuy: {} for {}'.format(
-            '+' if self.done else '-',
+        return 'ToBuy: {} for {}'.format(
             self.heading,
             self.price,
         )
